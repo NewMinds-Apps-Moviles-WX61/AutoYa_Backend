@@ -8,7 +8,7 @@ public class User
     public string Password { get; set; }
     public string PhoneNumber { get; set; }
     public string DNI { get; set; }
-    public string PhotoUrl { get; set; }
+    public string PhotoURL { get; set; }
     
     public Propietary Propietary { get; set; }
     public Tenant Tenant { get; set; }
