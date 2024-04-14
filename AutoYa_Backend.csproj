@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.14"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.3.23174.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.0-preview.3.23174.2" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="2.0.0-preview1-final" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="AutoYa\Controllers\" />
+      <Folder Include="AutoYa\Domain\Repositories\" />
+      <Folder Include="AutoYa\Domain\Services\Communication\" />
+      <Folder Include="AutoYa\Mapping\" />
+      <Folder Include="AutoYa\Persistence\" />
+      <Folder Include="AutoYa\Resources\" />
+      <Folder Include="AutoYa\Services\" />
+      <Folder Include="Shared\Domain\Services\Communication\" />
+      <Folder Include="Shared\Extensions\" />
+      <Folder Include="Shared\Persistence\Contexts\" />
+      <Folder Include="Shared\Persistence\Repositories\" />
+    </ItemGroup>
+
+</Project>
