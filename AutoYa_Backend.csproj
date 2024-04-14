@@ -20,12 +20,10 @@
     <ItemGroup>
       <Folder Include="AutoYa\Controllers\" />
       <Folder Include="AutoYa\Domain\Repositories\" />
-      <Folder Include="AutoYa\Domain\Services\Communication\" />
       <Folder Include="AutoYa\Mapping\" />
       <Folder Include="AutoYa\Persistence\" />
       <Folder Include="AutoYa\Resources\" />
       <Folder Include="AutoYa\Services\" />
-      <Folder Include="Shared\Domain\Services\Communication\" />
       <Folder Include="Shared\Persistence\Repositories\" />
     </ItemGroup>
 
