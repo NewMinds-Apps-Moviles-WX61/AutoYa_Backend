@@ -6,5 +6,7 @@ public class Message
     
     public int BodyInformationId { get; set; }
     public int DestinationId { get; set; }
+    public Destination Destination { get; set; }
+    public BodyInformation BodyInformation { get; set; }
     public IList<MessagePhoto> MessagePhotos { get; set; }
 }

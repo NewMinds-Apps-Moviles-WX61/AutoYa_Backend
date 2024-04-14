@@ -11,7 +11,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarDocumentation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarDocumentation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarPhoto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarPhoto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarReview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarReview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Message.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Notification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Notification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Request.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Request.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Review.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Review.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa_Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa_Backend.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +33,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2f4aQ5hifaoVWpsW9By9F8Zsfmz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -48,6 +57,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.smartKeys_rider",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -113,7 +123,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713062785182</updated>
-      <workItem from="1713062785862" duration="3265000" />
+      <workItem from="1713062785862" duration="3508000" />
+      <workItem from="1713118962238" duration="3597000" />
     </task>
     <servers />
   </component>

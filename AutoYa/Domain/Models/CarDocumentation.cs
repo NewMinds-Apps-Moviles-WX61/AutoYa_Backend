@@ -6,4 +6,5 @@ public class CarDocumentation
     public string photoURL { get; set; }
     
     public int CarId { get; set; }
+    public Car Car { get; set; }
 }

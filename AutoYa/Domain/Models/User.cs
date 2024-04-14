@@ -9,6 +9,7 @@ public class User
     public string PhoneNumber { get; set; }
     public string DNI { get; set; }
     public string? PhotoURL { get; set; }
+    public string Type { get; set; }
     
     public Propietary Propietary { get; set; }
     public Tenant Tenant { get; set; }

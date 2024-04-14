@@ -14,12 +14,13 @@ public class Car
     public string Mileage { get; set; }
     public string Condition { get; set; }
     public int Price { get; set; }
-    public string? AC { get; set; }
-    public string? GPS { get; set; }
+    public bool? AC { get; set; }
+    public bool? GPS { get; set; }
     public string Location { get; set; }
     public string status { get; set; }
     
     public int PropietaryId { get; set; }
+    public Propietary Propietary { get; set; }
     public IList<CarDocumentation> CarDocumentations { get; set; }
     public IList<CarPhoto> CarPhotos { get; set; }
     public IList<Request> Requests { get; set; }

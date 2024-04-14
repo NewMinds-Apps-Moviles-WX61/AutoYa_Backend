@@ -9,4 +9,5 @@ public class Rent
     public string Status { get; set; }
     
     public int RequestId { get; set; }
+    public Request Request { get; set; }
 }
