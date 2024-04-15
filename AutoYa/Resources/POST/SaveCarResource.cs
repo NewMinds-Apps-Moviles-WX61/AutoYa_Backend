@@ -2,6 +2,7 @@
 
 public class SaveCarResource
 {
+    public string Plate { get; set; }
     public string Brand { get; set; }
     public string Model { get; set; }
     public string YearManufactured { get; set; }
@@ -16,7 +17,7 @@ public class SaveCarResource
     public bool? AC { get; set; }
     public bool? GPS { get; set; }
     public string Location { get; set; }
-    public string status { get; set; }
-
+    
+    
     public int PropietaryId { get; set; }
 }

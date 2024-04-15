@@ -36,6 +36,8 @@ public class PropietaryService : IPropietaryService
             if (existingDNI != null)
                 return new PropietaryResponse("User with that DNI already exists.");
             
+            user.Type = "PROPIETARY";
+            
             await _userRepository.AddAsync(user);
             await _unitOfWork.CompleteAsync();
 
@@ -64,7 +66,7 @@ public class PropietaryService : IPropietaryService
         
         existingPropietary.ContractURL = propietary.ContractURL;
         
-        var existingUser = await _userRepository.FindByIdAsync(propietary.UserId);
+        var existingUser = await _userRepository.FindByIdAsync(existingPropietary.UserId);
         
         if (existingUser == null)
             return new PropietaryResponse("User not found.");

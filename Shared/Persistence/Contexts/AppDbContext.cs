@@ -41,6 +41,7 @@ public class AppDbContext : DbContext
         builder.Entity<Car>().ToTable("Cars");
         builder.Entity<Car>().HasKey(p=>p.Id);
         builder.Entity<Car>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Car>().Property(p=>p.Plate).IsRequired().HasMaxLength(6);
         builder.Entity<Car>().Property(p=>p.Brand).IsRequired().HasMaxLength(25);
         builder.Entity<Car>().Property(p=>p.Model).IsRequired().HasMaxLength(25);
         builder.Entity<Car>().Property(p=>p.YearManufactured).IsRequired().HasMaxLength(4);
@@ -55,17 +56,17 @@ public class AppDbContext : DbContext
         builder.Entity<Car>().Property(p=>p.AC);
         builder.Entity<Car>().Property(p=>p.GPS);
         builder.Entity<Car>().Property(p=>p.Location).IsRequired().HasMaxLength(200);
-        builder.Entity<Car>().Property(p=>p.status).IsRequired().HasMaxLength(25);
+        builder.Entity<Car>().Property(p=>p.Status).IsRequired().HasMaxLength(25);
         
         builder.Entity<CarDocumentation>().ToTable("CarDocumentations");
         builder.Entity<CarDocumentation>().HasKey(p=>p.Id);
         builder.Entity<CarDocumentation>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<CarDocumentation>().Property(p=>p.photoURL).IsRequired().HasMaxLength(5000);
+        builder.Entity<CarDocumentation>().Property(p=>p.CarDocumentationPhotoURL).IsRequired().HasMaxLength(5000);
         
         builder.Entity<CarPhoto>().ToTable("CarPhotos");
         builder.Entity<CarPhoto>().HasKey(p=>p.Id);
         builder.Entity<CarPhoto>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<CarPhoto>().Property(p=>p.photoURL).IsRequired().HasMaxLength(5000);
+        builder.Entity<CarPhoto>().Property(p=>p.CarPhotoURL).IsRequired().HasMaxLength(5000);
         
         builder.Entity<CarReview>().ToTable("CarReviews");
         builder.Entity<CarReview>().HasKey(p=>p.Id);
@@ -113,6 +114,7 @@ public class AppDbContext : DbContext
         builder.Entity<Review>().ToTable("Reviews");
         builder.Entity<Review>().HasKey(p=>p.Id);
         builder.Entity<Review>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Review>().Property(p=>p.Score).IsRequired();
         
         builder.Entity<Tenant>().ToTable("Tenants");
         builder.Entity<Tenant>().HasKey(p=>p.Id);

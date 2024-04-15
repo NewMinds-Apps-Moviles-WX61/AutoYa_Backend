@@ -36,6 +36,8 @@ public class TenantService : ITenantService
             if (existingDNI != null)
                 return new TenantResponse("User with that DNI already exists.");
             
+            user.Type = "TENANT";
+            
             await _userRepository.AddAsync(user);
             await _unitOfWork.CompleteAsync();
 
@@ -62,13 +64,12 @@ public class TenantService : ITenantService
         if (existingTenant == null)
             return new TenantResponse("Tenant not found.");
         
-        existingTenant.CriminalRecordURL = tenant.CriminalRecordURL;
-        
-        var existingUser = await _userRepository.FindByIdAsync(tenant.UserId);
+        var existingUser = await _userRepository.FindByIdAsync(existingTenant.UserId);
         
         if (existingUser == null)
             return new TenantResponse("User not found.");
         
+        existingTenant.CriminalRecordURL = tenant.CriminalRecordURL;
         existingUser.Name = user.Name;
         existingUser.PhoneNumber = user.PhoneNumber;
         existingUser.PhotoURL = user.PhotoURL;

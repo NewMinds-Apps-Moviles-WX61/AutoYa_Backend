@@ -11,10 +11,22 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Car.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarDocumentation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarDocumentation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarPhoto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarPhoto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Review.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Review.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/PropietaryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/PropietaryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/ReviewResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/ReviewResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarDocumentationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarDocumentationResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarPhotoResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarPhotoResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SavePropietaryResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SavePropietaryResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveReviewResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveReviewResource.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveTenantResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveTenantResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/PropietaryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/PropietaryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/TenantService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/TenantService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +133,10 @@
       <workItem from="1713118962238" duration="16339000" />
       <workItem from="1713151901971" duration="272000" />
       <workItem from="1713152180879" duration="70000" />
-      <workItem from="1713193480828" duration="1256000" />
+      <workItem from="1713193480828" duration="1506000" />
+      <workItem from="1713197403151" duration="6492000" />
+      <workItem from="1713203931776" duration="503000" />
+      <workItem from="1713212906919" duration="7465000" />
     </task>
     <servers />
   </component>

@@ -12,5 +12,4 @@ public class SavePropietaryResource
     public string PhoneNumber { get; set; }
     public string DNI { get; set; }
     public string? PhotoURL { get; set; }
-    public string Type { get; set; }
 }

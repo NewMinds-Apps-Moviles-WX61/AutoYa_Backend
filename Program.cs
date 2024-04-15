@@ -1,3 +1,4 @@
+using AutoYa_Backend.AutoYa.Domain.Models;
 using AutoYa_Backend.AutoYa.Domain.Repositories;
 using AutoYa_Backend.AutoYa.Domain.Services;
 using AutoYa_Backend.AutoYa.Mapping;
@@ -27,8 +28,14 @@ builder.Services.AddDbContext<AppDbContext>( options => options.UseNpgsql(connec
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 // Dependency Injection Configuration
+builder.Services.AddScoped<IBodyInformationRepository, BodyInformationRepository>();
+builder.Services.AddScoped<ICarRepository, CarRepository>();
+builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IPropietaryRepository, PropietaryRepository>();
 builder.Services.AddScoped<IPropietaryService, PropietaryService>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<ITenantRepository, TenantRepository>();
 builder.Services.AddScoped<ITenantService, TenantService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
