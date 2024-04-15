@@ -11,7 +11,23 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/BodyInformationResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/BodyInformationResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/CarDocumentationResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/CarDocumentationResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/CarPhotoResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/CarPhotoResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/CarResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/CarResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/CarReviewResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/CarReviewResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/DestinationResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/DestinationResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/MessagePhotoResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/MessagePhotoResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/MessageResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/MessageResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/NotificationResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/NotificationResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/PropietaryResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/PropietaryResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/RentResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/RentResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/RequestResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/RequestResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/ReviewResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/ReviewResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/TenantResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/TenantResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/Communication/UserResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Communication/UserResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa_Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa_Backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713062785182</updated>
       <workItem from="1713062785862" duration="3508000" />
-      <workItem from="1713118962238" duration="5673000" />
+      <workItem from="1713118962238" duration="16339000" />
     </task>
     <servers />
   </component>
