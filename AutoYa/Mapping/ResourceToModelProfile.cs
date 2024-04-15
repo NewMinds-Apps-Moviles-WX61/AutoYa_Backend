@@ -23,6 +23,7 @@ public class ResourceToModelProfile : Profile
         CreateMap<SaveRequestResource, Request>();
         CreateMap<SaveReviewResource, Review>();
         CreateMap<SaveTenantResource, Tenant>();
+        CreateMap<SaveTenantResource, User>();
         CreateMap<SaveUserResource, User>();
     }
 }
