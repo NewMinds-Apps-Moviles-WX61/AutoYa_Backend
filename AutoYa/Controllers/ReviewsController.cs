@@ -11,12 +11,12 @@ namespace AutoYa_Backend.AutoYa.Controllers;
 
 [ApiController]
 [Route("/api/v1/[controller]")]
-public class ReviewsControllers : ControllerBase
+public class ReviewsController : ControllerBase
 {
     private readonly IReviewService _reviewService;
     private readonly IMapper _mapper;
 
-    public ReviewsControllers(IReviewService reviewService, IMapper mapper)
+    public ReviewsController(IReviewService reviewService, IMapper mapper)
     {
         _reviewService = reviewService;
         _mapper = mapper;

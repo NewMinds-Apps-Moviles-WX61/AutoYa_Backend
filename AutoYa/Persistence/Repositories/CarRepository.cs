@@ -17,6 +17,12 @@ public class CarRepository : BaseRepository, ICarRepository
         return await _context.Cars.ToListAsync();
     }
 
+    public async Task<IQueryable<Car>> GetAllCarsAsync()
+    {
+        var cars = await _context.Cars.ToListAsync();
+        return cars.AsQueryable();
+    }
+
     public async Task AddAsync(Car car)
     {
         await _context.Cars.AddAsync(car);

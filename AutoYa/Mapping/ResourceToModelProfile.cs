@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using AutoYa_Backend.AutoYa.Domain.Models;
+using AutoYa_Backend.AutoYa.Resources.AuxiliarEntities;
+using AutoYa_Backend.AutoYa.Resources.GET;
 using AutoYa_Backend.AutoYa.Resources.POST;
 using AutoYa_Backend.AutoYa.Resources.PUT;
 
@@ -9,6 +11,7 @@ public class ResourceToModelProfile : Profile
 {
     public ResourceToModelProfile()
     {
+        CreateMap<GetCarByAttributes, CarSearchParams>();
         CreateMap<UpdateReviewResource, BodyInformation>();
         CreateMap<UpdateReviewResource, Review>();
         CreateMap<UpdateCarStatusResource, Car>();

@@ -1,6 +1,7 @@
 using AutoMapper;
 using AutoYa_Backend.AutoYa.Domain.Models;
 using AutoYa_Backend.AutoYa.Domain.Services;
+using AutoYa_Backend.AutoYa.Resources.AuxiliarEntities;
 using AutoYa_Backend.AutoYa.Resources.GET;
 using AutoYa_Backend.AutoYa.Resources.POST;
 using AutoYa_Backend.Shared.Extensions;
@@ -29,6 +30,24 @@ public class CarsController : ControllerBase
         
         return resources;
     }
+
+    [HttpPost("search")]
+    public async Task<IActionResult> GetByAttributesAsync([FromBody] GetCarByAttributes resource)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+
+        var carSearchParams = _mapper.Map<GetCarByAttributes, CarSearchParams>(resource);
+        var cars = await _carService.GetByAttributesAsync(carSearchParams);
+
+        if (!cars.Any())
+            return NotFound();
+
+        var carResources = _mapper.Map<IEnumerable<Car>, IEnumerable<CarResource>>(cars);
+
+        return Ok(carResources);
+    }
+    
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveCarResource resource)

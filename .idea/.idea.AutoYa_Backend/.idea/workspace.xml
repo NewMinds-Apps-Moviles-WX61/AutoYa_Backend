@@ -10,44 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Controllers/ReviewsControllers.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Controllers/TenantsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IBodyInformationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/ICarRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IDestinationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IReviewRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/ITenantRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/ICarService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/IReviewService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/ITenantService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/BodyInformationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/CarRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/DestinationRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/ReviewRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/TenantRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/UpdateCarStatusResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Resources/PUT/UpdateReviewResource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AutoYa/Services/TenantService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarDocumentation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarDocumentation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/CarPhoto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/CarPhoto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Review.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Review.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/ReviewsControllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/ReviewsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Repositories/ICarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/ICarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/ICarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/ICarService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/PropietaryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/PropietaryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/ReviewResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/ReviewResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarDocumentationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarDocumentationResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarPhotoResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarPhotoResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SavePropietaryResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SavePropietaryResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveReviewResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveReviewResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveTenantResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveTenantResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Services/PropietaryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/PropietaryService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/CarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/CarRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +31,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/f050ae044be8bddc002ab88736e4bf78dc822122/src/Mvc/Mvc.Abstractions/src/ModelBinding/ModelStateDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/f050ae044be8bddc002ab88736e4bf78dc822122/src/Mvc/Mvc.Core/src/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/efcore/0c1331defd978137cabbf33ff5fcc781592bbd46/src/EFCore/Extensions/EntityFrameworkQueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/544c7e6eb3d5525c6f85341f51217d81d7c8ed80/src/libraries/System.Private.CoreLib/src/System/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/829d6ac6e62b9bee9ef8e79e827d87d0c31a7c2eefbc354135d9a8f2c4deb/Mapper.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -77,7 +58,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -159,8 +140,41 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs</url>
+          <line>39</line>
+          <properties documentPath="D:\Ingenieria_de_Software\Ciclo8\Aplicaciones_para_Dispositivos_Moviles\Trabajo Final\AutoYa_Backend\AutoYa\Controllers\CarsController.cs" containingFunctionPresentation="Method 'GetByAttributesAsync'">
+            <startOffsets>
+              <option value="1185" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1266" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs</url>
+          <line>40</line>
+          <properties documentPath="D:\Ingenieria_de_Software\Ciclo8\Aplicaciones_para_Dispositivos_Moviles\Trabajo Final\AutoYa_Backend\AutoYa\Controllers\CarsController.cs" containingFunctionPresentation="Method 'GetByAttributesAsync'">
+            <startOffsets>
+              <option value="1275" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1342" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

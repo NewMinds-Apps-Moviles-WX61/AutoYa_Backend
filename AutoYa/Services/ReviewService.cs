@@ -10,14 +10,18 @@ public class ReviewService : IReviewService
     private readonly IReviewRepository _reviewRepository;
     private readonly IBodyInformationRepository _bodyInformationRepository;
     private readonly IDestinationRepository _destinationRepository;
+    private readonly IPropietaryRepository _propietaryRepository;
+    private readonly ITenantRepository _tenantRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public ReviewService(IReviewRepository reviewRepository, IBodyInformationRepository bodyInformationRepository, IDestinationRepository destinationRepository, IUnitOfWork unitOfWork)
+    public ReviewService(IReviewRepository reviewRepository, IBodyInformationRepository bodyInformationRepository, IDestinationRepository destinationRepository, IUnitOfWork unitOfWork, IPropietaryRepository propietaryRepository, ITenantRepository tenantRepository)
     {
         _reviewRepository = reviewRepository;
         _bodyInformationRepository = bodyInformationRepository;
         _destinationRepository = destinationRepository;
         _unitOfWork = unitOfWork;
+        _propietaryRepository = propietaryRepository;
+        _tenantRepository = tenantRepository;
     }
 
     public async Task<IEnumerable<Review>> ListAsync()
@@ -30,9 +34,17 @@ public class ReviewService : IReviewService
         try
         {
             //AGREGAR VALIDACION POR PROPIETARID Y TENANTID
+            var existingPropietary = await _propietaryRepository.FindByIdAsync(destination.PropietaryId);
             
-            var existingDestination =
-                await _destinationRepository.FindByIssuerPropietaryIdAndTenantIdAsync(
+            if (existingPropietary == null)
+                return new ReviewResponse("Propietary not found.");
+            
+            var existingTenant = await _tenantRepository.FindByIdAsync(destination.TenantId);
+            
+            if (existingTenant == null)
+                return new ReviewResponse("Tenant not found.");
+            
+            var existingDestination = await _destinationRepository.FindByIssuerPropietaryIdAndTenantIdAsync(
                     destination.Issuer, 
                     destination.PropietaryId,
                     destination.TenantId);
