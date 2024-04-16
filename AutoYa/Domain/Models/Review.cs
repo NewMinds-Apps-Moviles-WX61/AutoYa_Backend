@@ -3,6 +3,7 @@
 public class Review
 {
     public int Id { get; set; }
+    public int Score { get; set; }
     
     public int BodyInformationId { get; set; }
     public BodyInformation BodyInformation { get; set; }

@@ -2,6 +2,11 @@
 
 public class SaveReviewResource
 {
-    public int BodyInformationId { get; set; }
-    public int DestinationId { get; set; }
+    public int Score { get; set; }
+    public string Text { get; set; }
+    public string Date { get; set; }
+    public string Time { get; set; }
+    public string Issuer { get; set; }
+    public int PropietaryId { get; set; }
+    public int TenantId { get; set; }
 }

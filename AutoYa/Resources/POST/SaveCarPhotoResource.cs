@@ -2,7 +2,7 @@
 
 public class SaveCarPhotoResource
 {
-    public string photoURL { get; set; }
+    public string CarPhotoURL { get; set; }
 
     public int CarId { get; set; }
 }

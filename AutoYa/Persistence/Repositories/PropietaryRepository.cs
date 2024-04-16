@@ -24,7 +24,7 @@ public class PropietaryRepository : BaseRepository, IPropietaryRepository
 
     public async Task<Propietary> FindByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        return await _context.Propietaries.FindAsync(id);
     }
 
     public void Update(Propietary propietary)

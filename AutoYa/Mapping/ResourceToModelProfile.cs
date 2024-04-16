@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using AutoYa_Backend.AutoYa.Domain.Models;
 using AutoYa_Backend.AutoYa.Resources.POST;
+using AutoYa_Backend.AutoYa.Resources.PUT;
 
 namespace AutoYa_Backend.AutoYa.Mapping;
 
@@ -8,6 +9,9 @@ public class ResourceToModelProfile : Profile
 {
     public ResourceToModelProfile()
     {
+        CreateMap<UpdateReviewResource, BodyInformation>();
+        CreateMap<UpdateReviewResource, Review>();
+        CreateMap<UpdateCarStatusResource, Car>();
         CreateMap<SaveBodyInformationResource, BodyInformation>();
         CreateMap<SaveCarDocumentationResource, CarDocumentation>();
         CreateMap<SaveCarPhotoResource, CarPhoto>();
@@ -21,8 +25,11 @@ public class ResourceToModelProfile : Profile
         CreateMap<SavePropietaryResource, User>();
         CreateMap<SaveRentResource, Rent>();
         CreateMap<SaveRequestResource, Request>();
+        CreateMap<SaveReviewResource, BodyInformation>();
+        CreateMap<SaveReviewResource, Destination>();
         CreateMap<SaveReviewResource, Review>();
         CreateMap<SaveTenantResource, Tenant>();
+        CreateMap<SaveTenantResource, User>();
         CreateMap<SaveUserResource, User>();
     }
 }
