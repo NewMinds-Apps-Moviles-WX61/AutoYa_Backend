@@ -6,5 +6,7 @@ public class SaveCarReviewResource
 
     public int CarId { get; set; }
     public int TenantId { get; set; }
-    public int BodyInformationId { get; set; }
+    public string Text { get; set; }
+    public string Date { get; set; }
+    public string Time { get; set; }
 }

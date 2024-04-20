@@ -35,6 +35,8 @@ builder.Services.AddScoped<ICarDocumentationRepository, CarDocumentationReposito
 builder.Services.AddScoped<ICarDocumentationService, CarDocumentationService>();
 builder.Services.AddScoped<ICarPhotoRepository, CarPhotoRepository>();
 builder.Services.AddScoped<ICarPhotoService, CarPhotoService>();
+builder.Services.AddScoped<ICarReviewRepository, CarReviewRepository>();
+builder.Services.AddScoped<ICarReviewService, CarReviewService>();
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
 builder.Services.AddScoped<IPropietaryRepository, PropietaryRepository>();
 builder.Services.AddScoped<IPropietaryService, PropietaryService>();

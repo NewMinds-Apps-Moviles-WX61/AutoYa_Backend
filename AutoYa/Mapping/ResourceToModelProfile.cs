@@ -20,6 +20,7 @@ public class ResourceToModelProfile : Profile
         CreateMap<SaveCarPhotoResource, CarPhoto>();
         CreateMap<SaveCarResource, Car>();
         CreateMap<SaveCarReviewResource, CarReview>();
+        CreateMap<SaveCarReviewResource, BodyInformation>();
         CreateMap<SaveDestinationResource, Destination>();
         CreateMap<SaveMessagePhotoResource, MessagePhoto>();
         CreateMap<SaveMessageResource, Message>();

@@ -42,7 +42,7 @@ public class PropietaryService : IPropietaryService
             await _unitOfWork.CompleteAsync();
 
             // Obtener el ID del usuario generado automáticamente
-            int userId = user.Id;
+            var userId = user.Id;
 
             // Asignar el ID del usuario al propietario
             propietary.UserId = userId;

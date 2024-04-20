@@ -33,7 +33,6 @@ public class ReviewService : IReviewService
     {
         try
         {
-            //AGREGAR VALIDACION POR PROPIETARID Y TENANTID
             var existingPropietary = await _propietaryRepository.FindByIdAsync(destination.PropietaryId);
             
             if (existingPropietary == null)
@@ -85,12 +84,12 @@ public class ReviewService : IReviewService
         if (existingReview == null)
             return new ReviewResponse("Review not found.");
         
-        existingReview.Score = review.Score;
-        
         var existingBodyInformation = await _bodyInformationRepository.FindByIdAsync(existingReview.BodyInformationId);
         
         if (existingBodyInformation == null)
             return new ReviewResponse("BodyInformation not found.");
+
+        existingReview.Score = review.Score;
         
         existingBodyInformation.Text = bodyInformation.Text;
         existingBodyInformation.Date = bodyInformation.Date;

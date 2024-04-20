@@ -11,8 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/CarDocumentationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/CarDocumentationResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/CarPhotoResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/CarPhotoResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarReviewResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveCarReviewResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/PropietaryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/PropietaryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,6 +132,8 @@
       <workItem from="1713118962238" duration="17687000" />
       <workItem from="1713233216037" duration="57000" />
       <workItem from="1713317191853" duration="2989000" />
+      <workItem from="1713496759392" duration="120000" />
+      <workItem from="1713652103918" duration="4369000" />
     </task>
     <servers />
   </component>
