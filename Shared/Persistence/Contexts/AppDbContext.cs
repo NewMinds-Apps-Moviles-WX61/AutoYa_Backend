@@ -77,6 +77,7 @@ public class AppDbContext : DbContext
         builder.Entity<Destination>().HasKey(p=>p.Id);
         builder.Entity<Destination>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Destination>().Property(p=>p.Issuer).IsRequired().HasMaxLength(25);
+        builder.Entity<Destination>().Property(p=>p.Category).IsRequired().HasMaxLength(25);
         
         builder.Entity<Message>().ToTable("Messages");
         builder.Entity<Message>().HasKey(p=>p.Id);

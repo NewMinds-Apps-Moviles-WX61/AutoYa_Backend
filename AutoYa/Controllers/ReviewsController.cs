@@ -31,6 +31,18 @@ public class ReviewsController : ControllerBase
         return resources;
     }
 
+    [HttpGet("{propietaryId}/{tenantId}/{issuer}/{category}")]
+    public async Task<ReviewResource> GetAllByPropietaryIdTenantIdIssuerAndCategoryAsync(int propietaryId,
+        int tenantId, string issuer, string category)
+    {
+        var review =
+            await _reviewService.GetByPropietaryIdTenantIdIssuerAndCategoryAsync(propietaryId, tenantId, issuer,
+                category);
+        var resource = _mapper.Map<Review, ReviewResource>(review);
+
+        return resource;
+    }
+    
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveReviewResource resource)
     {

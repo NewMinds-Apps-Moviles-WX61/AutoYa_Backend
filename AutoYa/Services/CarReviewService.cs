@@ -96,9 +96,16 @@ public class CarReviewService : ICarReviewService
         if (existingCarReview == null)
             return new CarReviewResponse("CarReview not found.");
 
+        var existingBodyInformation = await _bodyInformationRepository.FindByIdAsync(existingCarReview.BodyInformationId);
+        
+        if (existingBodyInformation == null)
+            return new CarReviewResponse("BodyInformation not found.");
+        
         try
         {
             _carReviewRepository.Remove(existingCarReview);
+            await _unitOfWork.CompleteAsync();
+            _bodyInformationRepository.Remove(existingBodyInformation);
             await _unitOfWork.CompleteAsync();
             return new CarReviewResponse(existingCarReview);
         }

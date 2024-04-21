@@ -24,6 +24,8 @@ public class ResourceToModelProfile : Profile
         CreateMap<SaveDestinationResource, Destination>();
         CreateMap<SaveMessagePhotoResource, MessagePhoto>();
         CreateMap<SaveMessageResource, Message>();
+        CreateMap<SaveMessageResource, BodyInformation>();
+        CreateMap<SaveMessageResource, Destination>();
         CreateMap<SaveNotificationResource, Notification>();
         CreateMap<SavePropietaryResource, Propietary>();
         CreateMap<SavePropietaryResource, User>();

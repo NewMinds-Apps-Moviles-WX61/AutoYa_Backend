@@ -29,6 +29,17 @@ public class ReviewService : IReviewService
         return await _reviewRepository.ListAsync();
     }
 
+    public async Task<Review> GetByPropietaryIdTenantIdIssuerAndCategoryAsync(int propietaryId, int tenantId, string issuer, string category)
+    {
+        // Se obtiene el ID del destinatario en una lista porque este mismo método de DestinationRepository se usa en otros casos que devuelven más de un valor
+        var destinationIds = await _destinationRepository.ListDestinationIdsByPropietaryIdTenantIdIssuerAndCategoryAsync(propietaryId, tenantId, issuer, category);
+
+        // Como destinationIds es una lista que solo tendrá un elemento, se extrae el primer elemento
+        var destinationId = destinationIds.First();
+        
+        return await _reviewRepository.FindByDestinationIdAsync(destinationId);
+    }
+
     public async Task<ReviewResponse> SaveAsync(Review review, BodyInformation bodyInformation, Destination destination)
     {
         try
@@ -43,10 +54,11 @@ public class ReviewService : IReviewService
             if (existingTenant == null)
                 return new ReviewResponse("Tenant not found.");
             
-            var existingDestination = await _destinationRepository.FindByIssuerPropietaryIdAndTenantIdAsync(
+            var existingDestination = await _destinationRepository.FindByIssuerPropietaryIdTenantIdAndCategoryAsync(
                     destination.Issuer, 
                     destination.PropietaryId,
-                    destination.TenantId);
+                    destination.TenantId,
+                    destination.Category);
             
             if (existingDestination != null)
                 return new ReviewResponse("Review with that issuer, propietaryId and tenantId already exists.");

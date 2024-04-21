@@ -38,6 +38,8 @@ builder.Services.AddScoped<ICarPhotoService, CarPhotoService>();
 builder.Services.AddScoped<ICarReviewRepository, CarReviewRepository>();
 builder.Services.AddScoped<ICarReviewService, CarReviewService>();
 builder.Services.AddScoped<IDestinationRepository, DestinationRepository>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IMessageService, MessageService>();
 builder.Services.AddScoped<IPropietaryRepository, PropietaryRepository>();
 builder.Services.AddScoped<IPropietaryService, PropietaryService>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();

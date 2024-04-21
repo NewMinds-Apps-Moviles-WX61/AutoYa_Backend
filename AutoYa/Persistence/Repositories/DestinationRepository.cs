@@ -17,6 +17,16 @@ public class DestinationRepository : BaseRepository, IDestinationRepository
         return await _context.Destinations.ToListAsync();
     }
 
+    public async Task<IEnumerable<int>> ListDestinationIdsByPropietaryIdTenantIdIssuerAndCategoryAsync(int propietaryId,
+        int tenantId, string issuer, string category)
+    {
+        return await _context.Destinations
+            .Where(d => d.PropietaryId == propietaryId && d.TenantId == tenantId && d.Issuer == issuer &&
+                        d.Category == category)
+            .Select(d => d.Id)
+            .ToListAsync();
+    }
+    
     public async Task AddAsync(Destination destination)
     {
         await _context.Destinations.AddAsync(destination);
@@ -27,9 +37,9 @@ public class DestinationRepository : BaseRepository, IDestinationRepository
         return await _context.Destinations.FindAsync(id);
     }
 
-    public async Task<Destination> FindByIssuerPropietaryIdAndTenantIdAsync(string issuer, int propietaryId, int tenantId)
+    public async Task<Destination> FindByIssuerPropietaryIdTenantIdAndCategoryAsync(string issuer, int propietaryId, int tenantId, string category)
     {
-        return await _context.Destinations.Where(d => d.Issuer == issuer && d.PropietaryId == propietaryId && d.TenantId == tenantId).FirstOrDefaultAsync();
+        return await _context.Destinations.Where(d => d.Issuer == issuer && d.PropietaryId == propietaryId && d.TenantId == tenantId && d.Category == category).FirstOrDefaultAsync();
     }
 
     public void Update(Destination destination)

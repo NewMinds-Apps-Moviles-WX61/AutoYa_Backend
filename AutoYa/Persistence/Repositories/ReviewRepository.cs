@@ -17,6 +17,11 @@ public class ReviewRepository : BaseRepository, IReviewRepository
         return await _context.Reviews.ToListAsync();
     }
 
+    public async Task<Review> FindByDestinationIdAsync(int id)
+    {
+        return await _context.Reviews.Where(r => r.DestinationId == id).FirstOrDefaultAsync();
+    }
+
     public async Task AddAsync(Review review)
     {
         await _context.Reviews.AddAsync(review);
