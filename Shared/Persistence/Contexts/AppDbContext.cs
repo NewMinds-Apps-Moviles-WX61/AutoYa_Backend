@@ -16,8 +16,7 @@ public class AppDbContext : DbContext
     public DbSet<MessagePhoto> MessagePhotos { get; set; }
     public DbSet<Notification> Notifications { get; set; }
     public DbSet<Propietary> Propietaries { get; set; }
-    public DbSet<Rent> Rents { get; set; }
-    public DbSet<Request> Requests { get; set; }
+    public DbSet<Rent> Requests { get; set; }
     public DbSet<Review> Reviews { get; set; }
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<User> Users { get; set; }
@@ -98,20 +97,15 @@ public class AppDbContext : DbContext
         builder.Entity<Propietary>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Propietary>().Property(p=>p.ContractURL).IsRequired().HasMaxLength(5000);
         
-        builder.Entity<Rent>().ToTable("Rents");
+        builder.Entity<Rent>().ToTable("Requests");
         builder.Entity<Rent>().HasKey(p=>p.Id);
         builder.Entity<Rent>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Rent>().Property(p=>p.Status).IsRequired().HasMaxLength(25);
+        builder.Entity<Rent>().Property(p=>p.SubmissionDate).IsRequired().HasMaxLength(10);
         builder.Entity<Rent>().Property(p=>p.StartDate).IsRequired().HasMaxLength(10);
         builder.Entity<Rent>().Property(p=>p.EndDate).IsRequired().HasMaxLength(10);
         builder.Entity<Rent>().Property(p=>p.SignedContractURL).IsRequired().HasMaxLength(5000);
-        builder.Entity<Rent>().Property(p=>p.Status).IsRequired().HasMaxLength(25);
-        
-        builder.Entity<Request>().ToTable("Requests");
-        builder.Entity<Request>().HasKey(p=>p.Id);
-        builder.Entity<Request>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Request>().Property(p=>p.Status).IsRequired().HasMaxLength(25);
-        builder.Entity<Request>().Property(p=>p.SubmissionDate).IsRequired().HasMaxLength(10);
-        builder.Entity<Request>().Property(p=>p.TotalPrice).IsRequired();
+        builder.Entity<Rent>().Property(p=>p.TotalPrice).IsRequired();
         
         builder.Entity<Review>().ToTable("Reviews");
         builder.Entity<Review>().HasKey(p=>p.Id);
@@ -200,11 +194,6 @@ public class AppDbContext : DbContext
             .HasMany(p => p.Requests)
             .WithOne(p => p.Propietary)
             .HasForeignKey(p => p.PropietaryId);
-        
-        builder.Entity<Request>()
-            .HasOne(p=>p.Rent)
-            .WithOne(p=>p.Request)
-            .HasForeignKey<Rent>(p=>p.RequestId);
         
         builder.Entity<Tenant>()
             .HasMany(p=>p.Destinations)

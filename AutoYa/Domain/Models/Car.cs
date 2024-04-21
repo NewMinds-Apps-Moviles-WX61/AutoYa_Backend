@@ -24,6 +24,6 @@ public class Car
     public Propietary Propietary { get; set; }
     public IList<CarDocumentation> CarDocumentations { get; set; }
     public IList<CarPhoto> CarPhotos { get; set; }
-    public IList<Request> Requests { get; set; }
+    public IList<Rent> Requests { get; set; }
     public IList<CarReview> CarReviews { get; set; }
 }

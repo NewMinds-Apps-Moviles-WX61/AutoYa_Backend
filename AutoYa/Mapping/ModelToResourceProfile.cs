@@ -19,7 +19,6 @@ public class ModelToResourceProfile : Profile
         CreateMap<Notification, NotificationResource>();
         CreateMap<Propietary, PropietaryResource>();
         CreateMap<Rent, RentResource>();
-        CreateMap<Request, RequestResource>();
         CreateMap<Review, ReviewResource>();
         CreateMap<Tenant, TenantResource>();
         CreateMap<User, UserResource>();

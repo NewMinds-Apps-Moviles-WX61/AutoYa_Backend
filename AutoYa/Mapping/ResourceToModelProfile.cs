@@ -30,7 +30,6 @@ public class ResourceToModelProfile : Profile
         CreateMap<SavePropietaryResource, Propietary>();
         CreateMap<SavePropietaryResource, User>();
         CreateMap<SaveRentResource, Rent>();
-        CreateMap<SaveRequestResource, Request>();
         CreateMap<SaveReviewResource, BodyInformation>();
         CreateMap<SaveReviewResource, Destination>();
         CreateMap<SaveReviewResource, Review>();

@@ -11,14 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Message.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/MessageResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/MessageResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveMessageResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveMessageResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Services/MessageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/MessageService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,30 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.AutoYa_Backend: https.executor&quot;: &quot;Run&quot;,
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys_rider&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.AutoYa_Backend: https.executor": "Run",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\user\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\user\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.AutoYa_Backend: https">
     <configuration name="AutoYa_Backend: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AutoYa_Backend.csproj" />
@@ -137,7 +129,7 @@
       <workItem from="1713317191853" duration="2989000" />
       <workItem from="1713496759392" duration="120000" />
       <workItem from="1713652103918" duration="11457000" />
-      <workItem from="1713724688271" duration="10032000" />
+      <workItem from="1713724688271" duration="10510000" />
     </task>
     <servers />
   </component>

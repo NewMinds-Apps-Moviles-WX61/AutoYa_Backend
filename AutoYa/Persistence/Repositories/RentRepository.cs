@@ -6,49 +6,49 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AutoYa_Backend.AutoYa.Persistence.Repositories;
 
-public class RequestRepository : BaseRepository, IRequestRepository
+public class RentRepository : BaseRepository, IRentRepository
 {
-    public RequestRepository(AppDbContext context) : base(context)
+    public RentRepository(AppDbContext context) : base(context)
     {
     }
 
-    public async Task<IEnumerable<Request>> ListAsync()
+    public async Task<IEnumerable<Rent>> ListAsync()
     {
         return await _context.Requests.ToListAsync();
     }
 
-    public async Task<IEnumerable<Request>> ListByPropietaryIdAsync(int id)
+    public async Task<IEnumerable<Rent>> ListByPropietaryIdAsync(int id)
     {
         return await _context.Requests.Where(r => r.PropietaryId == id).ToListAsync();
     }
 
-    public async Task<Request> FindByIdAsync(int id)
+    public async Task<Rent> FindByIdAsync(int id)
     {
         return await _context.Requests.FindAsync(id);
     }
 
-    public async Task<IEnumerable<Request>> FindByCarIdAsync(int id)
+    public async Task<IEnumerable<Rent>> FindByCarIdAsync(int id)
     {
         return await _context.Requests.Where(r => r.CarId == id).ToListAsync();
     }
 
-    public async Task<Request> FindByPropietaryIdTenantIdAndStatusAsync(int propietaryId, int tenantId, string status)
+    public async Task<Rent> FindByPropietaryIdTenantIdAndStatusAsync(int propietaryId, int tenantId, string status)
     {
         return await _context.Requests.Where(r => r.PropietaryId == propietaryId && r.TenantId == tenantId && r.Status == status).FirstOrDefaultAsync();
     }
 
-    public async Task AddAsync(Request request)
+    public async Task AddAsync(Rent rent)
     {
-        await _context.Requests.AddAsync(request);
+        await _context.Requests.AddAsync(rent);
     }
 
-    public void Update(Request request)
+    public void Update(Rent rent)
     {
-        _context.Requests.Update(request);
+        _context.Requests.Update(rent);
     }
 
-    public void Remove(Request request)
+    public void Remove(Rent rent)
     {
-        _context.Requests.Remove(request);
+        _context.Requests.Remove(rent);
     }
 }

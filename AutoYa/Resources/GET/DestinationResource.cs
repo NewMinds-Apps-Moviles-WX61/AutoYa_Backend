@@ -10,6 +10,4 @@ public class DestinationResource
 
     public int PropietaryId { get; set; }
     public int TenantId { get; set; }
-    public Message Message { get; set; }
-    public Review Review { get; set; }
 }

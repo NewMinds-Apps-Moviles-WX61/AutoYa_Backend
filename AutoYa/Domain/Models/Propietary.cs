@@ -9,5 +9,5 @@ public class Propietary
     public User User { get; set; }
     public IList<Car> Cars { get; set; }
     public IList<Destination> Destinations { get; set; }
-    public IList<Request> Requests { get; set; }
+    public IList<Rent> Requests { get; set; }
 }

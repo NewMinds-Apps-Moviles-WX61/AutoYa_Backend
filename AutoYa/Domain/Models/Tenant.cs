@@ -10,5 +10,5 @@ public class Tenant
     public User User { get; set; }
     public IList<CarReview> CarReviews { get; set; }
     public IList<Destination> Destinations { get; set; }
-    public IList<Request> Requests { get; set; }
+    public IList<Rent> Requests { get; set; }
 }
