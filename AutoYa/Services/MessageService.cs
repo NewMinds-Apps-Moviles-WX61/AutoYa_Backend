@@ -8,13 +8,15 @@ namespace AutoYa_Backend.AutoYa.Services;
 public class MessageService : IMessageService
 {
     private readonly IMessageRepository _messageRepository;
+    private readonly IMessagePhotoRepository _messagePhotoRepository;
+    private readonly IMessagePhotoService _messagePhotoService;
     private readonly IBodyInformationRepository _bodyInformationRepository;
     private readonly IDestinationRepository _destinationRepository;
     private readonly IPropietaryRepository _propietaryRepository;
     private readonly ITenantRepository _tenantRepository;
     private readonly IUnitOfWork _unitOfWork;
 
-    public MessageService(IMessageRepository messageRepository, IBodyInformationRepository bodyInformationRepository, IDestinationRepository destinationRepository, IUnitOfWork unitOfWork, IPropietaryRepository propietaryRepository, ITenantRepository tenantRepository)
+    public MessageService(IMessageRepository messageRepository, IBodyInformationRepository bodyInformationRepository, IDestinationRepository destinationRepository, IUnitOfWork unitOfWork, IPropietaryRepository propietaryRepository, ITenantRepository tenantRepository, IMessagePhotoRepository messagePhotoRepository, IMessagePhotoService messagePhotoService)
     {
         _messageRepository = messageRepository;
         _bodyInformationRepository = bodyInformationRepository;
@@ -22,6 +24,8 @@ public class MessageService : IMessageService
         _unitOfWork = unitOfWork;
         _propietaryRepository = propietaryRepository;
         _tenantRepository = tenantRepository;
+        _messagePhotoRepository = messagePhotoRepository;
+        _messagePhotoService = messagePhotoService;
     }
 
     public async Task<IEnumerable<Message>> ListAsync()
@@ -125,8 +129,15 @@ public class MessageService : IMessageService
         if (existingDestination == null)
             return new MessageResponse("Destination not found.");
 
+        var existingMessagePhotos = await _messagePhotoRepository.ListByMessageIdAsync(existingMessage.Id);
+        
+        if (!existingMessagePhotos.Any())
+            return new MessageResponse("MessagePhotos not found.");
+
         try
         {
+            var deleteMessagePhotos = existingMessagePhotos.Select(messagePhoto => _messagePhotoService.DeleteAsync(messagePhoto.Id));
+            await Task.WhenAll(deleteMessagePhotos);
             _messageRepository.Remove(existingMessage);
             await _unitOfWork.CompleteAsync();
             _bodyInformationRepository.Remove(existingBodyInformation);

@@ -2,6 +2,8 @@
 
 public class SaveMessageResource
 {
+    // Message Attributes
+    public bool HasPhoto { get; set; }
     // BodyInformation Attributes
     public string Text { get; set; }
     public string Date { get; set; }

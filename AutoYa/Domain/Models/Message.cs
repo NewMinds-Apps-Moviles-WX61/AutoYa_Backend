@@ -3,6 +3,7 @@
 public class Message
 {
     public int Id { get; set; }
+    public bool HasPhoto { get; set; }
     
     public int BodyInformationId { get; set; }
     public int DestinationId { get; set; }

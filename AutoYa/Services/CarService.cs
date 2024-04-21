@@ -9,12 +9,20 @@ namespace AutoYa_Backend.AutoYa.Services;
 public class CarService : ICarService
 {
     private readonly ICarRepository _carRepository;
+    private readonly IRequestService _requestService;
+    private readonly ICarReviewService _carReviewService;
+    private readonly ICarDocumentationService _carDocumentationService;
+    private readonly ICarPhotoService _carPhotoService;
     private readonly IUnitOfWork _unitOfWork;
 
-    public CarService(ICarRepository carRepository, IUnitOfWork unitOfWork)
+    public CarService(ICarRepository carRepository, IUnitOfWork unitOfWork, IRequestService requestService, ICarReviewService carReviewService, ICarDocumentationService carDocumentationService, ICarPhotoService carPhotoService)
     {
         _carRepository = carRepository;
         _unitOfWork = unitOfWork;
+        _requestService = requestService;
+        _carReviewService = carReviewService;
+        _carDocumentationService = carDocumentationService;
+        _carPhotoService = carPhotoService;
     }
 
     public async Task<IEnumerable<Car>> ListAsync()
@@ -139,11 +147,28 @@ public class CarService : ICarService
         
         if (existingCar == null)
             return new CarResponse("Car not found.");
+
+        var existingRequests = await _requestService.ListByPlateAsync(existingCar.Plate);
+        var existingCarReviews = await _carReviewService.GetByCarIdAsync(id);
+        var existingDocumentations = await _carDocumentationService.ListByCarIdAsync(id);
+        var existingCarPhotos = await _carPhotoService.ListByCarIdAsync(id);
         
         try
         {
+            var deleteRequestTasks = existingRequests.Select(request => _requestService.DeleteAsync(request.Id));
+            var deleteCarReviewTasks = existingCarReviews.Select(review => _carReviewService.DeleteAsync(review.Id));
+            var deleteDocumentationTasks =
+                existingDocumentations.Select(doc => _carDocumentationService.DeleteAsync(doc.Id));
+            var deleteCarPhotoTasks = existingCarPhotos.Select(photo => _carPhotoService.DeleteAsync(photo.Id));
+
+            await Task.WhenAll(deleteRequestTasks);
+            await Task.WhenAll(deleteCarReviewTasks);
+            await Task.WhenAll(deleteDocumentationTasks);
+            await Task.WhenAll(deleteCarPhotoTasks);
+
             _carRepository.Remove(existingCar);
             await _unitOfWork.CompleteAsync();
+
             return new CarResponse(existingCar);
         }
         catch (Exception e)

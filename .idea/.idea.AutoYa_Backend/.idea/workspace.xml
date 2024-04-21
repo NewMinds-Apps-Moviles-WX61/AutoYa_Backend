@@ -11,20 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/ReviewsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/ReviewsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Destination.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Destination.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IDestinationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IDestinationRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IReviewRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IReviewRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/IReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/IReviewService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Mapping/ResourceToModelProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/DestinationRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/DestinationRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/ReviewRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/ReviewRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/DestinationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/DestinationResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveDestinationResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveDestinationResource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Models/Message.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Models/Message.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/GET/MessageResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/GET/MessageResource.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveMessageResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveMessageResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveReviewResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveReviewResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Services/CarReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/CarReviewService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/ReviewService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/CarService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AutoYa/Services/MessageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/MessageService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Shared/Persistence/Contexts/AppDbContext.cs" afterDir="false" />
     </list>
@@ -144,7 +136,8 @@
       <workItem from="1713233216037" duration="57000" />
       <workItem from="1713317191853" duration="2989000" />
       <workItem from="1713496759392" duration="120000" />
-      <workItem from="1713652103918" duration="11291000" />
+      <workItem from="1713652103918" duration="11457000" />
+      <workItem from="1713724688271" duration="10032000" />
     </task>
     <servers />
   </component>

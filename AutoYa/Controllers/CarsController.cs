@@ -83,6 +83,7 @@ public class CarsController : ControllerBase
         return Ok(carResource);
     }
     
+    /*
     [HttpPut("{id}/status")]
     public async Task<IActionResult> PutStatusAsync(int id, [FromBody] UpdateCarStatusResource resource)
     {
@@ -98,7 +99,7 @@ public class CarsController : ControllerBase
         var carResource = _mapper.Map<Car, CarResource>(result.Resource);
         
         return Ok(carResource);
-    }
+    }*/
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteAsync(int id)

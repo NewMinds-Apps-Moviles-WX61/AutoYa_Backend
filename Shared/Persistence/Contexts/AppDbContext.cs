@@ -82,6 +82,7 @@ public class AppDbContext : DbContext
         builder.Entity<Message>().ToTable("Messages");
         builder.Entity<Message>().HasKey(p=>p.Id);
         builder.Entity<Message>().Property(p=>p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Message>().Property(p=>p.HasPhoto).IsRequired();
         
         builder.Entity<MessagePhoto>().ToTable("MessagePhotos");
         builder.Entity<MessagePhoto>().HasKey(p=>p.Id);
