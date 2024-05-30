@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,9 @@
       <workItem from="1714098858817" duration="49000" />
       <workItem from="1714098983595" duration="610000" />
       <workItem from="1714100989752" duration="78000" />
-      <workItem from="1716925676725" duration="710000" />
+      <workItem from="1716925676725" duration="2690000" />
+      <workItem from="1717089816554" duration="936000" />
+      <workItem from="1717094169238" duration="1699000" />
     </task>
     <servers />
   </component>

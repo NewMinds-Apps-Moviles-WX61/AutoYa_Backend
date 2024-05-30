@@ -48,6 +48,14 @@ public class CarsController : ControllerBase
         return Ok(carResources);
     }
     
+    [HttpPost("search/propietaryId/{propietaryId}")]
+    public async Task<IActionResult> GetByPropietaryIdAsync(int propietaryId)
+    {
+        var cars = await _carService.GetByPropietaryIdAsync(propietaryId);
+        var resources = _mapper.Map<IEnumerable<Car>, IEnumerable<CarResource>>(cars);
+        
+        return Ok(resources);
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveCarResource resource)

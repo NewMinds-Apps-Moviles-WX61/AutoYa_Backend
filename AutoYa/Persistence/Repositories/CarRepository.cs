@@ -23,6 +23,11 @@ public class CarRepository : BaseRepository, ICarRepository
         return cars.AsQueryable();
     }
 
+    public async Task<IEnumerable<Car>> FindByPropietaryIdAsync(int propietaryId)
+    {
+        return await _context.Cars.Where(c => c.PropietaryId == propietaryId).ToListAsync();
+    }
+
     public async Task AddAsync(Car car)
     {
         await _context.Cars.AddAsync(car);

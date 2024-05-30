@@ -70,6 +70,11 @@ public class CarService : ICarService
         return query.ToList();
     }
 
+    public async Task<IEnumerable<Car>> GetByPropietaryIdAsync(int propietaryId)
+    {
+        return await _carRepository.FindByPropietaryIdAsync(propietaryId);
+    }
+
     public async Task<CarResponse> SaveAsync(Car car)
     {
         try
