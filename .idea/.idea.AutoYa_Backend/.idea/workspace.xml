@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
@@ -139,7 +138,7 @@
       <workItem from="1716925676725" duration="2690000" />
       <workItem from="1717089816554" duration="936000" />
       <workItem from="1717094169238" duration="3238000" />
-      <workItem from="1717282032196" duration="1074000" />
+      <workItem from="1717282032196" duration="1383000" />
     </task>
     <servers />
   </component>
