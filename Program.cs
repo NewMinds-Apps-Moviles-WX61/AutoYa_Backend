@@ -69,10 +69,15 @@ using (var context = scope.ServiceProvider.GetService<AppDbContext>())
 }
 
 // Configure the HTTP request pipeline.
+// Enable Swagger for all environments
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+        //c.RoutePrefix = string.Empty; // Serve Swagger at the app's root
+    });
 }
 
 app.UseHttpsRedirection();
