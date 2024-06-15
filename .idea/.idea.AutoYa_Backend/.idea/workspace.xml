@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/CarsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Repositories/ICarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/ICarRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/ICarService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/ICarService.cs" afterDir="false" />
@@ -144,7 +143,7 @@
       <workItem from="1717094169238" duration="3238000" />
       <workItem from="1717282032196" duration="2086000" />
       <workItem from="1718419012320" duration="2836000" />
-      <workItem from="1718491348417" duration="255000" />
+      <workItem from="1718491348417" duration="1057000" />
     </task>
     <servers />
   </component>

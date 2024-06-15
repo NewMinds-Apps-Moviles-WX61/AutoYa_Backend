@@ -92,6 +92,11 @@ public class CarService : ICarService
         return await _carRepository.FindAllAvailableCarsAsync();
     }
 
+    public async Task<IEnumerable<Car>> GetCarsByBrandAsync(string brand)
+    {
+        return await _carRepository.FindCarsByBrandAsync(brand);
+    }
+
     public async Task<CarResponse> SaveAsync(Car car)
     {
         try

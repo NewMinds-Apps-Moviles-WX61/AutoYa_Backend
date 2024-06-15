@@ -9,6 +9,7 @@ public interface ICarRepository
     Task<IEnumerable<Car>> FindByPropietaryIdAsync(int propietaryId);
     Task<IEnumerable<string>> FindAllCarBrandsAsync();
     Task<IEnumerable<Car>> FindAllAvailableCarsAsync();
+    Task<IEnumerable<Car>> FindCarsByBrandAsync(string brand);
     Task AddAsync(Car car);
     Task<Car> FindByIdAsync(int id);
     Task<Car> FindByPlateAsync(string plate);

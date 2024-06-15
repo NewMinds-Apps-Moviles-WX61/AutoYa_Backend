@@ -12,6 +12,7 @@ public interface ICarService
     Task<IEnumerable<Car>> GetByPropietaryIdAsync(int propietaryId);
     Task<IEnumerable<string>> GetAllCarBrandsAsync();
     Task<IEnumerable<Car>> GetAvailableCarsAsync();
+    Task<IEnumerable<Car>> GetCarsByBrandAsync(string brand);
     Task<CarResponse> SaveAsync(Car car);
     Task<CarResponse> UpdateAsync(int id, Car car);
     Task<CarResponse> UpdateStatusAsync(int id, Car car);

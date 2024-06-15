@@ -50,6 +50,15 @@ public class CarsController : ControllerBase
         return resources;
     }
     
+    [HttpGet("brand/{brand}")]
+    public async Task<IEnumerable<CarResource>> GetCarsByBrandAsync(string brand)
+    {
+        var cars = await _carService.GetCarsByBrandAsync(brand);
+        var resources = _mapper.Map<IEnumerable<Car>, IEnumerable<CarResource>>(cars);
+        
+        return resources;
+    }
+    
     [HttpPost("search")]
     public async Task<IActionResult> GetByAttributesAsync([FromBody] GetCarByAttributes resource)
     {
