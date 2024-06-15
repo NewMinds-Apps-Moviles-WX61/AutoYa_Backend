@@ -8,6 +8,7 @@ public interface ICarRepository
     Task<IQueryable<Car>> GetAllCarsAsync();
     Task<IEnumerable<Car>> FindByPropietaryIdAsync(int propietaryId);
     Task<IEnumerable<string>> FindAllCarBrandsAsync();
+    Task<IEnumerable<Car>> FindAllAvailableCarsAsync();
     Task AddAsync(Car car);
     Task<Car> FindByIdAsync(int id);
     Task<Car> FindByPlateAsync(string plate);

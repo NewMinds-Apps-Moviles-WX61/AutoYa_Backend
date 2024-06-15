@@ -33,6 +33,11 @@ public class CarRepository : BaseRepository, ICarRepository
         return await _context.Cars.Select(c => c.Brand).Distinct().ToListAsync();
     }
 
+    public async Task<IEnumerable<Car>> FindAllAvailableCarsAsync()
+    {
+        return await _context.Cars.Where(c => c.Status == "AVAILABLE").ToListAsync();
+    }
+
     public async Task AddAsync(Car car)
     {
         await _context.Cars.AddAsync(car);
