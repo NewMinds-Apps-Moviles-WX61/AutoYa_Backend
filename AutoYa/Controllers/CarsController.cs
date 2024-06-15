@@ -31,6 +31,16 @@ public class CarsController : ControllerBase
         return resources;
     }
 
+    [HttpGet("{id:int}")]
+    public async Task<CarResource> GetCarByIdAsync(int id)
+    {
+        var car = await _carService.GetByIdAsync(id);
+        
+        var resource = _mapper.Map<Car, CarResource>(car);
+        
+        return resource;
+    }
+    
     [HttpPost("search")]
     public async Task<IActionResult> GetByAttributesAsync([FromBody] GetCarByAttributes resource)
     {
@@ -55,6 +65,14 @@ public class CarsController : ControllerBase
         var resources = _mapper.Map<IEnumerable<Car>, IEnumerable<CarResource>>(cars);
         
         return Ok(resources);
+    }
+    
+    [HttpGet("brands")]
+    public async Task<IEnumerable<string>> GetAllCarBrandsAsync()
+    {
+        var brands = await _carService.GetAllCarBrandsAsync();
+        
+        return brands;
     }
 
     [HttpPost]

@@ -5,6 +5,7 @@ namespace AutoYa_Backend.AutoYa.Resources.GET;
 public class CarResource
 {
     public int Id { get; set; }
+    public string Plate { get; set; }
     public string Brand { get; set; }
     public string Model { get; set; }
     public string YearManufactured { get; set; }

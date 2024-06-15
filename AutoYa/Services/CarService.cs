@@ -30,6 +30,13 @@ public class CarService : ICarService
         return await _carRepository.ListAsync();
     }
 
+    public async Task<Car> GetByIdAsync(int id)
+    {
+        var existingCar = await _carRepository.FindByIdAsync(id);
+
+        return existingCar ?? null;
+    }
+
     public async Task<IEnumerable<Car>> GetByAttributesAsync(CarSearchParams car)
     {
         var query = await _carRepository.GetAllCarsAsync();
@@ -73,6 +80,11 @@ public class CarService : ICarService
     public async Task<IEnumerable<Car>> GetByPropietaryIdAsync(int propietaryId)
     {
         return await _carRepository.FindByPropietaryIdAsync(propietaryId);
+    }
+
+    public async Task<IEnumerable<string>> GetAllCarBrandsAsync()
+    {
+        return await _carRepository.FindAllCarBrandsAsync();
     }
 
     public async Task<CarResponse> SaveAsync(Car car)

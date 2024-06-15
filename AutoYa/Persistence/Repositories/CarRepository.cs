@@ -28,6 +28,11 @@ public class CarRepository : BaseRepository, ICarRepository
         return await _context.Cars.Where(c => c.PropietaryId == propietaryId).ToListAsync();
     }
 
+    public async Task<IEnumerable<string>> FindAllCarBrandsAsync()
+    {
+        return await _context.Cars.Select(c => c.Brand).Distinct().ToListAsync();
+    }
+
     public async Task AddAsync(Car car)
     {
         await _context.Cars.AddAsync(car);
