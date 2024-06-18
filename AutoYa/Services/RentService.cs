@@ -28,6 +28,11 @@ public class RentService : IRentService
         return await _rentRepository.ListByPropietaryIdAsync(id);
     }
 
+    public async Task<IEnumerable<Rent>> ListAllRentsByTenantIdAsync(int id)
+    {
+        return await _rentRepository.GetAllRentsByTenantIdAsync(id);
+    }
+
     public async Task<IEnumerable<Rent>> ListByPlateAsync(string plate)
     {
         var car = await _carRepository.FindByPlateAsync(plate);
@@ -45,12 +50,15 @@ public class RentService : IRentService
         if (existingCar.Status != "AVAILABLE")
             return new RentResponse("Car is not available.");
         
+        if (existingCar.PropietaryId != rent.PropietaryId)
+            return new RentResponse("Car is not owned by that propietary.");
+        
         try
         {
-            var existingRequest = await _rentRepository.FindByPropietaryIdTenantIdAndStatusAsync(rent.PropietaryId, rent.TenantId, rent.Status);
+            var existingRequest = await _rentRepository.FindCurrentlyOpenRentByPropietaryIdTenantIdAndCarIdAsync(rent.PropietaryId, rent.TenantId, rent.CarId);
 
             if (existingRequest != null)
-                return new RentResponse("Rent with that propietaryId, tenantId and status already exists.");
+                return new RentResponse("There's already a submitted rent request with that propietaryId, tenantId and carId already exists.");
 
             rent.Status = "SUBMITTED";
 
@@ -80,8 +88,58 @@ public class RentService : IRentService
 
         existingCar.Status = rent.Status is "SUBMITTED" or "REJECTED" or "CANCELLED" or "FINISHED" ? "AVAILABLE" : "UNAVAILABLE";
 
-    try
+        try
+        {
+            _rentRepository.Update(existingRequest);
+            await _unitOfWork.CompleteAsync();
+            _carRepository.Update(existingCar);
+            await _unitOfWork.CompleteAsync();
+            return new RentResponse(existingRequest);
+        }
+        catch (Exception e)
+        {
+            return new RentResponse($"An error occurred while updating the rent: {e.Message}");
+        }
+    }
+
+    public async Task<RentResponse> UpdateRentStatusAsync(int id, string status)
     {
+        try
+        {
+            var existingRequest = await _rentRepository.FindByIdAsync(id);
+        
+            if (existingRequest == null)
+                return new RentResponse("Rent not found.");
+        
+            var existingCar = await _carRepository.FindByIdAsync(existingRequest.CarId);
+        
+            if (existingCar == null)
+                return new RentResponse("Car not found.");
+
+            switch (status)
+            {
+                case "ACCEPTED":
+                    existingRequest.Status = "ACCEPTED";
+                    existingCar.Status = "UNAVAILABLE";
+                    break;
+                case "REJECTED":
+                    existingRequest.Status = "REJECTED";
+                    existingCar.Status = "AVAILABLE";
+                    break;
+                case "CANCELLED":
+                    existingRequest.Status = "CANCELLED";
+                    existingCar.Status = "AVAILABLE";
+                    break;
+                case "FINISHED":
+                    existingRequest.Status = "FINISHED";
+                    existingCar.Status = "AVAILABLE";
+                    break;
+                default:
+                    existingRequest.Status = "SUBMITTED";
+                    existingCar.Status = "AVAILABLE";
+                    break;
+            }
+            
             _rentRepository.Update(existingRequest);
             await _unitOfWork.CompleteAsync();
             _carRepository.Update(existingCar);

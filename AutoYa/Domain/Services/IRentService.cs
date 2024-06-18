@@ -7,8 +7,10 @@ public interface IRentService
 {
     Task<IEnumerable<Rent>> ListAsync();
     Task<IEnumerable<Rent>> ListByPropietaryIdAsync(int id);
+    Task<IEnumerable<Rent>> ListAllRentsByTenantIdAsync(int id);
     Task<IEnumerable<Rent>> ListByPlateAsync(string plate);
     Task<RentResponse> SaveAsync(Rent rent);
     Task<RentResponse> UpdateAsync(int id, Rent rent);
+    Task<RentResponse> UpdateRentStatusAsync(int id, string status);
     Task<RentResponse> DeleteAsync(int id);
 }

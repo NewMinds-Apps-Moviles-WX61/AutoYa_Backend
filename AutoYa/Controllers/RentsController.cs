@@ -3,6 +3,7 @@ using AutoYa_Backend.AutoYa.Domain.Models;
 using AutoYa_Backend.AutoYa.Domain.Services;
 using AutoYa_Backend.AutoYa.Resources.GET;
 using AutoYa_Backend.AutoYa.Resources.POST;
+using AutoYa_Backend.AutoYa.Resources.PUT;
 using AutoYa_Backend.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,12 +31,21 @@ public class RentsController : ControllerBase
         return resources;
     }
 
-    [HttpGet("{carId}")]
-    public async Task<IEnumerable<RentResource>> GetAllByPropietaryIdAsync(int carId)
+    [HttpGet("propietary/{propietaryId:int}")]
+    public async Task<IEnumerable<RentResource>> GetAllByPropietaryIdAsync(int propietaryId)
     {
-        var requests = await _rentService.ListByPropietaryIdAsync(carId);
+        var requests = await _rentService.ListByPropietaryIdAsync(propietaryId);
         var resources = _mapper.Map<IEnumerable<Rent>, IEnumerable<RentResource>>(requests);
 
+        return resources;
+    }
+    
+    [HttpGet("tenant/{tenantId:int}")]
+    public async Task<IEnumerable<RentResource>> GetAllRentsByTenantIdAsync(int tenantId)
+    {
+        var request = await _rentService.ListAllRentsByTenantIdAsync(tenantId);
+        var resources = _mapper.Map<IEnumerable<Rent>, IEnumerable<RentResource>>(request);
+        
         return resources;
     }
 
@@ -79,6 +89,70 @@ public class RentsController : ControllerBase
 
         var requestResource = _mapper.Map<Rent, RentResource>(result.Resource);
 
+        return Ok(requestResource);
+    }
+    
+    [HttpPut("put-accepted/{id:int}")]
+    public async Task<IActionResult> PutAcceptedAsync(int id)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+        
+        var result = await _rentService.UpdateRentStatusAsync(id, "ACCEPTED");
+        
+        if (!result.Success)
+            return BadRequest(result.Message);
+        
+        var requestResource = _mapper.Map<Rent, RentResource>(result.Resource);
+        
+        return Ok(requestResource);
+    }
+    
+    [HttpPut("put-rejected/{id:int}")]
+    public async Task<IActionResult> PutRejectedAsync(int id)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+        
+        var result = await _rentService.UpdateRentStatusAsync(id, "REJECTED");
+        
+        if (!result.Success)
+            return BadRequest(result.Message);
+        
+        var requestResource = _mapper.Map<Rent, RentResource>(result.Resource);
+        
+        return Ok(requestResource);
+    }
+    
+    [HttpPut("put-cancelled/{id:int}")]
+    public async Task<IActionResult> PutCancelledAsync(int id)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+        
+        var result = await _rentService.UpdateRentStatusAsync(id, "CANCELLED");
+        
+        if (!result.Success)
+            return BadRequest(result.Message);
+        
+        var requestResource = _mapper.Map<Rent, RentResource>(result.Resource);
+        
+        return Ok(requestResource);
+    }
+    
+    [HttpPut("put-finished/{id:int}")]
+    public async Task<IActionResult> PutFinishedAsync(int id)
+    {
+        if (!ModelState.IsValid)
+            return BadRequest(ModelState.GetErrorMessages());
+        
+        var result = await _rentService.UpdateRentStatusAsync(id, "FINISHED");
+        
+        if (!result.Success)
+            return BadRequest(result.Message);
+        
+        var requestResource = _mapper.Map<Rent, RentResource>(result.Resource);
+        
         return Ok(requestResource);
     }
     

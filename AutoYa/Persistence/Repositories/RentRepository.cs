@@ -22,6 +22,11 @@ public class RentRepository : BaseRepository, IRentRepository
         return await _context.Requests.Where(r => r.PropietaryId == id).ToListAsync();
     }
 
+    public async Task<IEnumerable<Rent>> GetAllRentsByTenantIdAsync(int id)
+    {
+        return await _context.Requests.Where(r => r.TenantId == id).ToListAsync();
+    }
+
     public async Task<Rent> FindByIdAsync(int id)
     {
         return await _context.Requests.FindAsync(id);
@@ -32,9 +37,9 @@ public class RentRepository : BaseRepository, IRentRepository
         return await _context.Requests.Where(r => r.CarId == id).ToListAsync();
     }
 
-    public async Task<Rent> FindByPropietaryIdTenantIdAndStatusAsync(int propietaryId, int tenantId, string status)
+    public async Task<Rent> FindCurrentlyOpenRentByPropietaryIdTenantIdAndCarIdAsync(int propietaryId, int tenantId, int carId)
     {
-        return await _context.Requests.Where(r => r.PropietaryId == propietaryId && r.TenantId == tenantId && r.Status == status).FirstOrDefaultAsync();
+        return await _context.Requests.Where(r => r.PropietaryId == propietaryId && r.TenantId == tenantId && r.CarId == carId).FirstOrDefaultAsync();
     }
 
     public async Task AddAsync(Rent rent)

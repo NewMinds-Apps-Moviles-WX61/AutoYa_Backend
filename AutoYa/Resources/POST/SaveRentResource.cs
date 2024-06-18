@@ -2,7 +2,6 @@
 
 public class SaveRentResource
 {
-    public string Status { get; set; }
     public string SubmissionDate { get; set; }
     public string StartDate { get; set; }
     public string EndDate { get; set; }
