@@ -30,6 +30,15 @@ public class UsersController : ControllerBase
         return resources;
     }
     
+    [HttpGet("{userId:int}")]
+    public async Task<UserResource> GetByIdAsync(int userId)
+    {
+        var user = await _userService.GetByIdAsync(userId);
+        var resource = _mapper.Map<User, UserResource>(user);
+        
+        return resource;
+    }
+    
     [HttpPost("login")]
     public async Task<IActionResult> LoginPropietaryAsync([FromBody] LoginResource loginResource)
     {

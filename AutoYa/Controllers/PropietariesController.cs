@@ -29,6 +29,15 @@ public class PropietariesController : ControllerBase
         
         return resources;
     }
+    
+    [HttpGet("{propietaryId:int}")]
+    public async Task<PropietaryResource> GetByIdAsync(int propietaryId)
+    {
+        var propietary = await _propietaryService.GetByIdAsync(propietaryId);
+        var resource = _mapper.Map<Propietary, PropietaryResource>(propietary);
+        
+        return resource;
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SavePropietaryResource resource)

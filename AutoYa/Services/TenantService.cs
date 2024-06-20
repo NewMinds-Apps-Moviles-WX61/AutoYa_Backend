@@ -23,6 +23,11 @@ public class TenantService : ITenantService
         return await _tenantRepository.ListAsync();
     }
 
+    public async Task<Tenant> GetByIdAsync(int id)
+    {
+        return await _tenantRepository.FindByIdAsync(id);
+    }
+
     public async Task<TenantResponse> SaveAsync(Tenant tenant, User user)
     {
         try

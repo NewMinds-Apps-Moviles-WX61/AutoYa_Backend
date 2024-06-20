@@ -29,6 +29,15 @@ public class TenantsController : ControllerBase
         
         return resources;
     }
+    
+    [HttpGet("{tenantId:int}")]
+    public async Task<TenantResource> GetByIdAsync(int tenantId)
+    {
+        var tenant = await _tenantService.GetByIdAsync(tenantId);
+        var resource = _mapper.Map<Tenant, TenantResource>(tenant);
+        
+        return resource;
+    }
 
     [HttpPost]
     public async Task<IActionResult> PostAsync([FromBody] SaveTenantResource resource)

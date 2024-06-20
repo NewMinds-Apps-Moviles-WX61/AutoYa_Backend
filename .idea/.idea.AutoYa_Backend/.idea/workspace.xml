@@ -11,14 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb8a1704-ba44-411a-ab89-ef0a2f22c8d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AutoYa_Backend/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Controllers/RentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Controllers/RentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IRentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Repositories/IRentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Domain/Services/IRentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Domain/Services/IRentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/CarRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/CarRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/RentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Persistence/Repositories/RentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveRentResource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Resources/POST/SaveRentResource.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoYa/Services/RentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AutoYa/Services/RentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +136,8 @@
       <workItem from="1718491348417" duration="1441000" />
       <workItem from="1718659197633" duration="3071000" />
       <workItem from="1718683773106" duration="2373000" />
-      <workItem from="1718721398881" duration="495000" />
+      <workItem from="1718721398881" duration="1805000" />
+      <workItem from="1718731404480" duration="76000" />
     </task>
     <servers />
   </component>
