@@ -17,6 +17,12 @@ public class PropietaryRepository : BaseRepository, IPropietaryRepository
         return await _context.Propietaries.ToListAsync();
     }
 
+    public async Task<Propietary> FindByUserIdAsync(int userId)
+    {
+        return await _context.Propietaries
+            .FirstOrDefaultAsync(p => p.UserId == userId);
+    }
+
     public async Task AddAsync(Propietary propietary)
     {
         await _context.Propietaries.AddAsync(propietary);

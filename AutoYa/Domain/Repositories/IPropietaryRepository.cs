@@ -5,6 +5,7 @@ namespace AutoYa_Backend.AutoYa.Domain.Repositories;
 public interface IPropietaryRepository
 {
     Task<IEnumerable<Propietary>> ListAsync();
+    Task<Propietary> FindByUserIdAsync(int userId);
     Task AddAsync(Propietary propietary);
     Task<Propietary> FindByIdAsync(int id);
     void Update(Propietary propietary);

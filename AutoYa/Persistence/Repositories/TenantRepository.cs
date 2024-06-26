@@ -17,6 +17,12 @@ public class TenantRepository : BaseRepository, ITenantRepository
         return await _context.Tenants.ToListAsync();
     }
 
+    public async Task<Tenant> FindByUserIdAsync(int userId)
+    {
+        return await _context.Tenants
+            .FirstOrDefaultAsync(t => t.UserId == userId);
+    }
+
     public async Task AddAsync(Tenant tenant)
     {
         await _context.Tenants.AddAsync(tenant);

@@ -28,6 +28,11 @@ public class PropietaryService : IPropietaryService
         return await _propietaryRepository.FindByIdAsync(id);
     }
 
+    public async Task<Propietary> GetByUserIdAsync(int userId)
+    {
+        return await _propietaryRepository.FindByUserIdAsync(userId);
+    }
+
     public async Task<PropietaryResponse> SaveAsync(Propietary propietary, User user)
     {
         try

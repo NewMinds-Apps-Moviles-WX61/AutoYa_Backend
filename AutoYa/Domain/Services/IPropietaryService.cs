@@ -7,6 +7,7 @@ public interface IPropietaryService
 {
     Task<IEnumerable<Propietary>> ListAsync();
     Task<Propietary> GetByIdAsync(int id);
+    Task<Propietary> GetByUserIdAsync(int userId);
     Task<PropietaryResponse> SaveAsync(Propietary propietary, User user);
     Task<PropietaryResponse> UpdateAsync(int id, Propietary propietary, User user);
     Task<PropietaryResponse> DeleteAsync(int id);
